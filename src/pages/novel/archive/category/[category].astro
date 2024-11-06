@@ -1,0 +1,24 @@
+---
+import { getNovelCategoryList } from '@utils/content-utils'
+import NovelGridLayout from '@layouts/NovelGridLayout.astro'
+import NovelArchivePanel from '@components/NovelArchivePanel.astro'
+import { i18n } from '@i18n/translation'
+import I18nKey from '@i18n/i18nKey'
+
+export async function getStaticPaths() {
+  const categories = await getNovelCategoryList()
+  return categories.map(category => {
+    return {
+      params: {
+        category: category.name,
+      },
+    }
+  })
+}
+
+const category = Astro.params.category as string
+---
+
+<NovelGridLayout title={i18n(I18nKey.archive)} description={i18n(I18nKey.archive)}>
+    <NovelArchivePanel categories={[category]}></NovelArchivePanel>
+</NovelGridLayout>

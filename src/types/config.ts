@@ -35,9 +35,10 @@ export type Favicon = {
 }
 
 export enum LinkPreset {
-  Home = 0,
-  Archive = 1,
-  About = 2,
+  Blog = 0,
+  Novel = 1,
+  Archive = 2,
+  About = 3,
 }
 
 export type NavBarLink = {
@@ -85,4 +86,36 @@ export type BlogPostData = {
   prevSlug?: string
   nextTitle?: string
   nextSlug?: string
+}
+/* for Novels Below */
+export type NovelPostData = {
+  body: string
+  title: string
+  published: Date
+  description: string
+  tags: string[]
+  draft?: boolean
+  image?: string
+  category?: string
+  prevTitle?: string
+  prevSlug?: string
+  nextTitle?: string
+  nextSlug?: string
+}
+
+export enum NovelLinkPreset {
+  Blog = 0,
+  Novel = 1,
+  Archive = 2,
+  About = 3,
+}
+
+export type NovelNavBarLink = {
+  name: string
+  url: string
+  external?: boolean
+}
+
+export type NovelNavBarConfig = {
+  links: (NovelNavBarLink | NovelLinkPreset)[]
 }

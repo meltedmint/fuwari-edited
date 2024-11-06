@@ -33,3 +33,20 @@ export function getDir(path: string): string {
 export function url(path: string) {
   return joinUrl('', import.meta.env.BASE_URL, path)
 }
+
+/* For Novels Below */
+export function getNovelPostUrlBySlug(slug: string): string {
+  return url(`/novel/${slug}/`)
+}
+
+export function getNovelCategoryUrl(category: string): string {
+  if (category === i18n(i18nKey.uncategorized))
+    return url('/novel/archive/category/uncategorized/')
+  return url(`/novel/archive/category/${category}/`)
+}
+
+export function getNovelArchiveCategoryUrl(category: string): string {
+  if (category === i18n(i18nKey.uncategorized))
+    return url('/novel/archive/category/uncategorized/')
+  return url(`/novel/archive/category/${category}/`)
+}

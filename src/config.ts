@@ -1,22 +1,23 @@
 import type {
   LicenseConfig,
+  NovelNavBarConfig,
   NavBarConfig,
   ProfileConfig,
   SiteConfig,
 } from './types/config'
-import { LinkPreset } from './types/config'
+import { LinkPreset, NovelLinkPreset } from './types/config'
 
 export const siteConfig: SiteConfig = {
-  title: 'Fuwari',
-  subtitle: 'Demo Site',
-  lang: 'en',         // 'en', 'zh_CN', 'zh_TW', 'ja', 'ko'
+  title: 'Melted_Mint',
+  subtitle: 'Site',
+  lang: 'ko',         // 'en', 'zh_CN', 'zh_TW', 'ja', 'ko'
   themeColor: {
-    hue: 250,         // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
+    hue: 215,         // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
     fixed: false,     // Hide the theme color picker for visitors
   },
   banner: {
     enable: false,
-    src: 'assets/images/demo-banner.png',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+    src: '',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
     position: 'center',      // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
     credit: {
       enable: false,         // Display the credit text of the banner image
@@ -39,7 +40,8 @@ export const siteConfig: SiteConfig = {
 
 export const navBarConfig: NavBarConfig = {
   links: [
-    LinkPreset.Home,
+    LinkPreset.Blog,
+    LinkPreset.Novel,
     LinkPreset.Archive,
     LinkPreset.About,
     {
@@ -79,4 +81,18 @@ export const licenseConfig: LicenseConfig = {
   enable: true,
   name: 'CC BY-NC-SA 4.0',
   url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+}
+
+export const NovelnavBarConfig: NovelNavBarConfig = {
+  links: [
+    NovelLinkPreset.Blog,
+    NovelLinkPreset.Novel,
+    NovelLinkPreset.Archive,
+    NovelLinkPreset.About,
+    {
+      name: 'GitHub',
+      url: 'https://github.com/melted-mint',     // Internal links should not include the base path, as it is automatically added
+      external: true,                               // Show an external link icon and will open in a new tab
+    },
+  ],
 }
