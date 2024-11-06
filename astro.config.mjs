@@ -1,3 +1,4 @@
+import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
@@ -31,16 +32,17 @@ const oklchToHex = str => {
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://fuwari.vercel.app/',
+  site: 'https://meltedmint.com',
   base: '/',
   trailingSlash: 'always',
   integrations: [
     tailwind(),
+    mdx(),
     swup({
       theme: false,
-      animationClass: 'transition-swup-',   // see https://swup.js.org/options/#animationselector
-                                            // the default value `transition-` cause transition delay
-                                            // when the Tailwind class `transition-all` is used
+      animationClass: 'transition-swup-', // see https://swup.js.org/options/#animationselector
+      // the default value `transition-` cause transition delay
+      // when the Tailwind class `transition-all` is used
       containers: ['main', '#toc'],
       smoothScrolling: true,
       cache: true,
