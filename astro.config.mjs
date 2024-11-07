@@ -34,7 +34,7 @@ const oklchToHex = str => {
 export default defineConfig({
   site: 'https://meltedmint.com',
   base: '/',
-  trailingSlash: 'always',
+  trailingSlash: 'never',
   integrations: [
     tailwind(),
     mdx(),
