@@ -6,7 +6,6 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build && pagefind --site dist --glob \"**/posts/**/*.html\"",
-    "buildbg": "astro build && pagefind --site dist_bg --glob \"**/posts/**/*.html\"",
     "preview": "astro preview",
     "astro": "astro",
     "type-check": "tsc --noEmit --isolatedDeclarations",
