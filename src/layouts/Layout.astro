@@ -9,12 +9,12 @@ import { profileConfig, siteConfig } from '@/config'
 import ConfigCarrier from '@components/ConfigCarrier.astro'
 import {
   AUTO_MODE,
-  DARK_MODE,
-  DEFAULT_THEME,
-  LIGHT_MODE,
   BANNER_HEIGHT,
   BANNER_HEIGHT_EXTEND,
   BANNER_HEIGHT_HOME,
+  DARK_MODE,
+  DEFAULT_THEME,
+  LIGHT_MODE,
   PAGE_WIDTH,
 } from '../constants/constants'
 import { defaultFavicons } from '../constants/icon'
@@ -434,6 +434,8 @@ if (window?.swup?.hooks) {
 }
 
 let backToTopBtn = document.getElementById('back-to-top-btn');
+let goToBottomBtn = document.getElementById('go-to-bottom-btn');
+let mainGrid = document.getElementById('main-grid');
 let toc = document.getElementById('toc-wrapper');
 let navbar = document.getElementById('navbar-wrapper')
 function scrollFunction() {
@@ -446,6 +448,18 @@ function scrollFunction() {
 			backToTopBtn.classList.add('hide')
 		}
 	}
+	
+    if (goToBottomBtn) {
+        let mainGridRect = mainGrid.getBoundingClientRect();
+        let windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        if (mainGridRect.bottom <= windowHeight) {
+            // `mainGrid`의 하단이 뷰포트 내에 있음
+            goToBottomBtn.classList.add('hide');
+        } else {
+            goToBottomBtn.classList.remove('hide');
+        }
+    }
 
 	if (bannerEnabled && toc) {
 		if (document.body.scrollTop > bannerHeight || document.documentElement.scrollTop > bannerHeight) {
