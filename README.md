@@ -31,6 +31,12 @@ It is the same as the original.
 4. Run `pnpm new-post <filename>` to create a new post and edit it in `src/content/posts/`.
 5. Deploy your blog to Vercel, Netlify, GitHub Pages, etc. following [the guides](https://docs.astro.build/en/guides/deploy/). You need to edit the site configuration in `astro.config.mjs` before deployment.
 
+## For Comments
+
+The File is located at `/src/layouts/CommentNovelGridLayout.astro`.
+You should add your code there.
+For more information, visit [giscus](https://giscus.app/).
+
 ## ⚙️ Frontmatter of Posts
 
 ```yaml
