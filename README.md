@@ -1,34 +1,30 @@
-# 🍥Fuwari
+This forked repository origins `Fuwari`.
+For more Information, visit [fuwari](https://github.com/saicaca/fuwari).
 
-A static blog template built with [Astro](https://astro.build).
+## Features
 
-[**🖥️ Live Demo (Vercel)**](https://fuwari.vercel.app)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[**📦 Old Hexo Version**](https://github.com/saicaca/hexo-theme-vivia)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[**🌏 中文**](https://github.com/saicaca/fuwari/blob/main/README.zh-CN.md)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[**🌏 日本語**](https://github.com/saicaca/fuwari/blob/main/README.ja-JP.md)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[**🌏 한국어**](https://github.com/saicaca/fuwari/blob/main/README.ko.md)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[**🌏 Español**](https://github.com/saicaca/fuwari/blob/main/README.es.md)
-
-> README version: `2024-09-10`
-
-![Preview Image](https://raw.githubusercontent.com/saicaca/resource/main/fuwari/home.png)
-
-## ✨ Features
+It is very similar from the original.
 
 - [x] Built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com)
 - [x] Smooth animations and page transitions
 - [x] Light / dark mode
 - [x] Customizable theme colors & banner
 - [x] Responsive design
-- [x] Comments
-- [x] Search
+- [x] Scroll top & bottom button (With Mobile)
+- [x] Blog, Novel. Seperated Folder.
+- [x] Comments (With Theme)
+- [x] Search (Novel Folder Blocked from build command)
 - [ ] TOC
 
 ## Comments Powered By Giscus!!!
 
+## Any Questions? Just Contact me :D
+
 ## 🚀 How to Use
 
-1. [Generate a new repository](https://github.com/saicaca/fuwari/generate) from this template or fork this repository.
+It is the same as the original.
+
+1. [Generate a new repository](https://github.com/melted-mint/fuwari-edited.git) from this template or fork this repository.
 2. To edit your blog locally, clone your repository, run `pnpm install` AND `pnpm add sharp` to install dependencies.
    - Install [pnpm](https://pnpm.io) `npm install -g pnpm` if you haven't.
 3. Edit the config file `src/config.ts` to customize your blog.
