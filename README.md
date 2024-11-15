@@ -33,9 +33,11 @@ It is the same as the original.
 
 ## For Comments
 
-The File is located at `/src/layouts/CommentNovelGridLayout.astro`.
-You should add your code there.
-For more information, visit [giscus](https://giscus.app/).
+The File is located at:  
+`/src/layouts/CommentNovelGridLayout.astro`,  
+`/src/layouts/CommentMainGridLayout.astro`.  
+You should add your code there.  
+For more information, visit [giscus](https://giscus.app/).  
 
 ## ⚙️ Frontmatter of Posts
 
