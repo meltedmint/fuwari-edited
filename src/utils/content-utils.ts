@@ -4,11 +4,11 @@ import I18nKey from '@i18n/i18nKey'
 import { i18n } from '@i18n/translation'
 
 export async function getSortedPosts(): Promise<
-{ body: string, data: BlogPostData; slug: string }[]
+  { body: string; data: BlogPostData; slug: string }[]
 > {
   const allBlogPosts = (await getCollection('posts', ({ data }) => {
     return import.meta.env.PROD ? data.draft !== true : true
-  })) as unknown as { body: string, data: BlogPostData; slug: string }[]
+  })) as unknown as { body: string; data: BlogPostData; slug: string }[]
 
   const sorted = allBlogPosts.sort(
     (a: { data: BlogPostData }, b: { data: BlogPostData }) => {
@@ -44,7 +44,7 @@ export async function getTagList(): Promise<Tag[]> {
   allBlogPosts.map((post: { data: { tags: string[] } }) => {
     post.data.tags.map((tag: string) => {
       if (!countMap[tag]) countMap[tag] = 0
-        countMap[tag]++
+      countMap[tag]++
     })
   })
 
@@ -73,8 +73,8 @@ export async function getCategoryList(): Promise<Category[]> {
       return
     }
     count[post.data.category] = count[post.data.category]
-    ? count[post.data.category] + 1
-    : 1
+      ? count[post.data.category] + 1
+      : 1
   })
 
   const lst = Object.keys(count).sort((a, b) => {
@@ -90,7 +90,7 @@ export async function getCategoryList(): Promise<Category[]> {
 
 /* For Novels Below */
 export async function getSortedNovelPosts(): Promise<
-{ body: string; data: NovelPostData; slug: string }[]
+  { body: string; data: NovelPostData; slug: string }[]
 > {
   const allNovelPosts = (await getCollection('novel', ({ data }) => {
     return import.meta.env.PROD ? data.draft !== true : true
@@ -125,7 +125,7 @@ export async function getNovelTagList(): Promise<Tag[]> {
   allNovelPosts.map((post: { data: { tags: string[] } }) => {
     post.data.tags.map((tag: string) => {
       if (!countMap[tag]) countMap[tag] = 0
-        countMap[tag]++
+      countMap[tag]++
     })
   })
 
@@ -149,8 +149,8 @@ export async function getNovelCategoryList(): Promise<Category[]> {
       return
     }
     count[post.data.category] = count[post.data.category]
-    ? count[post.data.category] + 1
-    : 1
+      ? count[post.data.category] + 1
+      : 1
   })
 
   const lst = Object.keys(count).sort((a, b) => {

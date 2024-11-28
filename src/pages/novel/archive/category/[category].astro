@@ -1,9 +1,9 @@
 ---
-import { getNovelCategoryList } from '@utils/content-utils'
-import NovelGridLayout from '@layouts/NovelGridLayout.astro'
 import NovelArchivePanel from '@components/NovelArchivePanel.astro'
-import { i18n } from '@i18n/translation'
 import I18nKey from '@i18n/i18nKey'
+import { i18n } from '@i18n/translation'
+import NovelGridLayout from '@layouts/NovelGridLayout.astro'
+import { getNovelCategoryList } from '@utils/content-utils'
 
 export async function getStaticPaths() {
   const categories = await getNovelCategoryList()
