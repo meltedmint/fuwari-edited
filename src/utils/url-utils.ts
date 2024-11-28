@@ -50,3 +50,20 @@ export function getNovelArchiveCategoryUrl(category: string): string {
     return url('/novel/archive/category/uncategorized/')
   return url(`/novel/archive/category/${category}/`)
 }
+
+/* For Spinoff Below */
+export function getSpinoffPostUrlBySlug(slug: string): string {
+  return url(`/spinoff/${slug}/`)
+}
+
+export function getSpinoffCategoryUrl(category: string): string {
+  if (category === i18n(i18nKey.uncategorized))
+    return url('/spinoff/archive/category/uncategorized/')
+  return url(`/spinoff/archive/category/${category}/`)
+}
+
+export function getSpinoffArchiveCategoryUrl(category: string): string {
+  if (category === i18n(i18nKey.uncategorized))
+    return url('/spinoff/archive/category/uncategorized/')
+  return url(`/spinoff/archive/category/${category}/`)
+}

@@ -37,8 +37,9 @@ export type Favicon = {
 export enum LinkPreset {
   Blog = 0,
   Novel = 1,
-  Archive = 2,
-  About = 3,
+  Spinoff = 2,
+  Archive = 3,
+  About = 4,
 }
 
 export type NavBarLink = {
@@ -106,8 +107,9 @@ export type NovelPostData = {
 export enum NovelLinkPreset {
   Blog = 0,
   Novel = 1,
-  Archive = 2,
-  About = 3,
+  Spinoff = 2,
+  Archive = 3,
+  About = 4,
 }
 
 export type NovelNavBarLink = {
@@ -118,4 +120,38 @@ export type NovelNavBarLink = {
 
 export type NovelNavBarConfig = {
   links: (NovelNavBarLink | NovelLinkPreset)[]
+}
+
+/* for Spinoff Below */
+export type SpinoffPostData = {
+  body: string
+  title: string
+  published: Date
+  description: string
+  tags: string[]
+  draft?: boolean
+  image?: string
+  category?: string
+  prevTitle?: string
+  prevSlug?: string
+  nextTitle?: string
+  nextSlug?: string
+}
+
+export enum SpinoffLinkPreset {
+  Blog = 0,
+  Novel = 1,
+  Spinoff = 2,
+  Archive = 3,
+  About = 4,
+}
+
+export type SpinoffNavBarLink = {
+  name: string
+  url: string
+  external?: boolean
+}
+
+export type SpinoffNavBarConfig = {
+  links: (SpinoffNavBarLink | SpinoffLinkPreset)[]
 }

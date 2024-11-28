@@ -4,8 +4,9 @@ import type {
   NovelNavBarConfig,
   ProfileConfig,
   SiteConfig,
+  SpinoffNavBarConfig,
 } from './types/config'
-import { LinkPreset, NovelLinkPreset } from './types/config'
+import { LinkPreset, NovelLinkPreset, SpinoffLinkPreset } from './types/config'
 
 export const siteConfig: SiteConfig = {
   title: 'Melted_Mint',
@@ -42,6 +43,7 @@ export const navBarConfig: NavBarConfig = {
   links: [
     LinkPreset.Blog,
     LinkPreset.Novel,
+    LinkPreset.Spinoff,
     LinkPreset.Archive,
     LinkPreset.About,
     {
@@ -83,12 +85,30 @@ export const licenseConfig: LicenseConfig = {
   url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 }
 
+/* For Novels Below */
 export const NovelnavBarConfig: NovelNavBarConfig = {
   links: [
     NovelLinkPreset.Blog,
     NovelLinkPreset.Novel,
+    NovelLinkPreset.Spinoff,
     NovelLinkPreset.Archive,
     NovelLinkPreset.About,
+    {
+      name: 'GitHub',
+      url: 'https://github.com/melted-mint/fuwari-edited',     // Internal links should not include the base path, as it is automatically added
+      external: true,                               // Show an external link icon and will open in a new tab
+    },
+  ],
+}
+
+/* For Novels Below */
+export const SpinoffnavBarConfig: SpinoffNavBarConfig = {
+  links: [
+    SpinoffLinkPreset.Blog,
+    SpinoffLinkPreset.Novel,
+    SpinoffLinkPreset.Spinoff,
+    SpinoffLinkPreset.Archive,
+    SpinoffLinkPreset.About,
     {
       name: 'GitHub',
       url: 'https://github.com/melted-mint/fuwari-edited',     // Internal links should not include the base path, as it is automatically added

@@ -1,5 +1,6 @@
 import { LinkPreset, type NavBarLink } from '@/types/config'
-import { NovelLinkPreset, type NovelNavBarLink } from '@/types/config'
+import type { NovelLinkPreset, NovelNavBarLink } from '@/types/config'
+import type { SpinoffLinkPreset, SpinoffNavBarLink } from '@/types/config'
 import I18nKey from '@i18n/i18nKey'
 import { i18n } from '@i18n/translation'
 
@@ -12,13 +13,17 @@ export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
     name: i18n(I18nKey.novel),
     url: '/novel/',
   },
-  [LinkPreset.About]: {
-    name: i18n(I18nKey.about),
-    url: '/about/',
+  [LinkPreset.Spinoff]: {
+    name: i18n(I18nKey.spinoff),
+    url: '/spinoff/',
   },
   [LinkPreset.Archive]: {
     name: i18n(I18nKey.archive),
     url: '/archive/',
+  },
+  [LinkPreset.About]: {
+    name: i18n(I18nKey.about),
+    url: '/about/',
   },
 }
 
@@ -31,13 +36,41 @@ export const NovelLinkPresets: { [key in NovelLinkPreset]: NovelNavBarLink } = {
     name: i18n(I18nKey.novel),
     url: '/novel/',
   },
+  [LinkPreset.Spinoff]: {
+    name: i18n(I18nKey.spinoff),
+    url: '/spinoff/',
+  },
+  [LinkPreset.Archive]: {
+    name: i18n(I18nKey.archive),
+    url: '/novel/archive/',
+  },
   [LinkPreset.About]: {
     name: i18n(I18nKey.about),
     url: '/about/',
   },
-  [LinkPreset.Archive]: {
-    name: i18n(I18nKey.archive),
-    url: '/archive/',
-  },
 }
 
+export const SpinoffLinkPresets: {
+  [key in SpinoffLinkPreset]: SpinoffNavBarLink
+} = {
+  [LinkPreset.Blog]: {
+    name: i18n(I18nKey.blog),
+    url: '/',
+  },
+  [LinkPreset.Novel]: {
+    name: i18n(I18nKey.novel),
+    url: '/novel/',
+  },
+  [LinkPreset.Spinoff]: {
+    name: i18n(I18nKey.spinoff),
+    url: '/spinoff/',
+  },
+  [LinkPreset.Archive]: {
+    name: i18n(I18nKey.archive),
+    url: '/spinoff/archive/',
+  },
+  [LinkPreset.About]: {
+    name: i18n(I18nKey.about),
+    url: '/about/',
+  },
+}

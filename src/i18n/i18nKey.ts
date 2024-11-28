@@ -1,6 +1,7 @@
 enum I18nKey {
   blog = 'blog',
   novel = 'novel',
+  spinoff = 'spinoff',
   about = 'about',
   archive = 'archive',
   search = 'search',
