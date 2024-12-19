@@ -1,4 +1,5 @@
 This forked repository origins `Fuwari`.
+I'll update the features when I notice the new commit is applied to the original.
 For more Information, visit [fuwari](https://github.com/saicaca/fuwari).
 
 ## Features
@@ -14,7 +15,10 @@ It is very similar from the original.
 - [x] Blog, Novel. Seperated Folder.
 - [x] Comments (With Theme)
 - [x] Search (Novel Folder Blocked from build command)
+- [x] mdx, md both ok
 - [ ] TOC
+
+△ : Profile Picture is hidden by default.
 
 ## Comments Powered By Giscus!!!
 
@@ -45,6 +49,7 @@ For more information, visit [giscus](https://giscus.app/).
 ---
 title: My First Blog Post
 published: 2023-09-09
+updated: 2024-12-20
 description: This is the first post of my new Astro blog.
 image: ./cover.jpg
 tags: [Foo, Bar]
