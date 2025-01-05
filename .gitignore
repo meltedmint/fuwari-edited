@@ -25,3 +25,11 @@ pnpm-debug.log*
 package-lock.json
 bun.lockb
 yarn.lock
+/src/content/posts/Music
+/src/content/posts/Life
+/src/content/posts/Game
+/src/content/novel
+/src/content/posts
+/public/posts/Music
+/src/content/spinoff
+/public/posts/Beselig
