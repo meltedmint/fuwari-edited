@@ -1,4 +1,5 @@
 import mdx from "@astrojs/mdx"
+import node from "@astrojs/node";
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
@@ -34,7 +35,11 @@ const oklchToHex = (str) => {
 export default defineConfig({
   site: "https://meltedmint.com",
   base: '/',
-  trailingSlash: "ignore",
+  output: "hybrid",
+  adapter: node({
+    mode: "middleware",
+  }),
+  trailingSlash: "always",
   integrations: [
     tailwind(),
     mdx(),
