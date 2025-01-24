@@ -25,7 +25,3 @@ pnpm-debug.log*
 package-lock.json
 bun.lockb
 yarn.lock
-/src/content/posts
-/src/content/novel
-/public/posts
-/src/content/spinoff

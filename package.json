@@ -36,6 +36,7 @@
     "astro-icon": "^1.1.2",
     "colorjs.io": "^0.5.2",
     "express": "^4.21.2",
+    "fuwari-edited": "file:",
     "hastscript": "^9.0.0",
     "markdown-it": "^14.1.0",
     "mdast-util-to-string": "^4.0.0",
