@@ -11,7 +11,7 @@ import { LinkPreset, NovelLinkPreset, SpinoffLinkPreset } from './types/config'
 export const siteConfig: SiteConfig = {
   title: 'Melted_Mint',
   subtitle: 'Site',
-  lang: 'ko',         // 'en', 'zh_CN', 'zh_TW', 'ja', 'ko'
+  lang: 'ko',         // 'en', 'ja', 'ko'
   themeColor: {
     hue: 215,         // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
     fixed: false,     // Hide the theme color picker for visitors

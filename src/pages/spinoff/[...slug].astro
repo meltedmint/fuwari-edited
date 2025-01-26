@@ -1,23 +1,19 @@
 ---
-import path from 'node:path'
-import { getCollection } from 'astro:content'
 import License from '@components/misc/License.astro'
 import Markdown from '@components/misc/Markdown.astro'
 import I18nKey from '@i18n/i18nKey'
 import { i18n } from '@i18n/translation'
 import CommentSpinoffGridLayout from '@layouts/CommentSpinoffGridLayout.astro'
-import { getDir, getSpinoffPostUrlBySlug } from '@utils/url-utils'
+import { getSpinoffPostUrlBySlug } from '@utils/url-utils'
 import { Icon } from 'astro-icon/components'
 import { licenseConfig } from 'src/config'
 import SpinoffPostMetadata from '../../components/SpinoffPostMeta.astro'
-import ImageWrapper from '../../components/misc/ImageWrapper.astro'
 import { profileConfig, siteConfig } from '../../config'
 import { formatDateToYYYYMMDD } from '../../utils/date-utils'
+import { getSortedSpinoffPosts } from '@utils/content-utils'
 
 export async function getStaticPaths() {
-  const spinoffEntries = await getCollection('spinoff', ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true
-  })
+  const spinoffEntries = await getSortedSpinoffPosts()
   return spinoffEntries.map(entry => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -110,7 +106,6 @@ const jsonLd = {
 
         </div>
     </div>
-
     <div class="flex flex-col md:flex-row justify-between mb-4 gap-4 overflow-hidden w-full">
         <a href={entry.data.prevSlug ? getSpinoffPostUrlBySlug(entry.data.prevSlug) : "#"}
            class:list={["w-full font-bold overflow-hidden active:scale-95", {"pointer-events-none": !entry.data.prevSlug}]}>
@@ -131,8 +126,7 @@ const jsonLd = {
                 <Icon name="material-symbols:chevron-right-rounded" class="text-[2rem] text-[var(--primary)]" />
             </div>}
         </a>
-    </div>
-
+    </div> 
 </CommentSpinoffGridLayout>
 
 <style is:global>

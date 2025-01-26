@@ -52,7 +52,7 @@ const getPageUrl = (p: number) => {
 const getNextUrl = (p: number) => {
   p += 5;
   if (p >= page.lastPage)
-  return `/novel/${page.lastPage}`;
+  return `/novel/${page.lastPage}/`;
   return `/novel/${p}/`;
 }
 

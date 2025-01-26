@@ -8,13 +8,13 @@ import { url } from '../utils/url-utils'
 interface Props {
   class: string
   published: Date
+  updated?: Date
   tags: string[]
   category: string
   hideTagsForMobile?: boolean
-  updated?: Date
   hideUpdateDate?: boolean
 }
-const { published, tags, category, hideTagsForMobile = false, updated, hideUpdateDate = false  } = Astro.props
+const { published, updated, tags, category, hideTagsForMobile = false, hideUpdateDate = false  } = Astro.props
 const className = Astro.props.class
 ---
 

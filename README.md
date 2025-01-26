@@ -1,8 +1,16 @@
+# Fuwari-Edited
+
+A static blog template built with [Astro](https://astro.build).
+
+[**🖥️ Live Demo (Node)**](https://meltedmint.com)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+
 This forked repository origins `Fuwari`.  
 I'll update the features when I notice the new commit is applied to the original.  
 For more Information, visit [fuwari](https://github.com/saicaca/fuwari).  
 
-## Features
+> README version: `2025-01-26`
+
+## ✨ Features
 
 It is very similar from the original.
 
@@ -17,31 +25,29 @@ It is very similar from the original.
 - [x] Search (Novel Folder Blocked from build command)
 - [x] mdx, md both ok
 - [ ] TOC
+- [ ] Audio... I don't know where the error occurs from.
   
 △ : Profile Picture is hidden by default.  
   
 ## Comments Powered By Giscus!!!
 
+The Comments File is located at:  
+`/src/layouts/CommentSpinoffGridLayout.astro`,
+`/src/layouts/CommentNovelGridLayout.astro`,  
+`/src/layouts/CommentMainGridLayout.astro`.  
+You should add your own code there.  
+For more information, visit [giscus](https://giscus.app/).  
+
 ## Any Questions? Just Contact me :D
 
 ## 🚀 How to Use
 
-It is the same as the original.
-
-1. [Generate a new repository](https://github.com/melted-mint/fuwari-edited.git) from this template or fork this repository.
+1. [Generate a new repository](https://github.com/saicaca/fuwari/generate) from this template or fork this repository.
 2. To edit your blog locally, clone your repository, run `pnpm install` AND `pnpm add sharp` to install dependencies.
    - Install [pnpm](https://pnpm.io) `npm install -g pnpm` if you haven't.
 3. Edit the config file `src/config.ts` to customize your blog.
 4. Run `pnpm new-post <filename>` to create a new post and edit it in `src/content/posts/`.
 5. Deploy your blog to Vercel, Netlify, GitHub Pages, etc. following [the guides](https://docs.astro.build/en/guides/deploy/). You need to edit the site configuration in `astro.config.mjs` before deployment.
-
-## For Comments
-
-The File is located at:  
-`/src/layouts/CommentNovelGridLayout.astro`,  
-`/src/layouts/CommentMainGridLayout.astro`.  
-You should add your code there.  
-For more information, visit [giscus](https://giscus.app/).  
 
 ## ⚙️ Frontmatter of Posts
 
@@ -49,7 +55,6 @@ For more information, visit [giscus](https://giscus.app/).
 ---
 title: My First Blog Post
 published: 2023-09-09
-updated: 2024-12-20
 description: This is the first post of my new Astro blog.
 image: ./cover.jpg
 tags: [Foo, Bar]

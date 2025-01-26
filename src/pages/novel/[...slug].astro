@@ -1,28 +1,25 @@
 ---
-import path from 'node:path'
-import { getCollection } from 'astro:content'
 import License from '@components/misc/License.astro'
 import Markdown from '@components/misc/Markdown.astro'
 import I18nKey from '@i18n/i18nKey'
 import { i18n } from '@i18n/translation'
 import CommentNovelGridLayout from '@layouts/CommentNovelGridLayout.astro'
-import { getDir, getNovelPostUrlBySlug } from '@utils/url-utils'
+import { getNovelPostUrlBySlug } from '@utils/url-utils'
 import { Icon } from 'astro-icon/components'
 import { licenseConfig } from 'src/config'
 import NovelPostMetadata from '../../components/NovelPostMeta.astro'
-import ImageWrapper from '../../components/misc/ImageWrapper.astro'
 import { profileConfig, siteConfig } from '../../config'
 import { formatDateToYYYYMMDD } from '../../utils/date-utils'
+import { getSortedNovelPosts } from '@utils/content-utils'
 
 export async function getStaticPaths() {
-  const novelEntries = await getCollection('novel', ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true
-  })
+  const novelEntries = await getSortedNovelPosts()
   return novelEntries.map(entry => ({
     params: { slug: entry.slug },
     props: { entry },
   }))
 }
+
 
 const { entry } = Astro.props
 const { Content, headings } = await entry.render()
