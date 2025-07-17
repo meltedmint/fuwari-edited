@@ -63,6 +63,24 @@ function backToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function goToBottom() {
-    window.scrollTo({ top: 999999999, behavior: 'smooth' });
+    window.scrollTo({ top: 9999999999, behavior: 'smooth' });
 }
+
+// 버튼 표시/숨김 제어
+function toggleGoToBottomBtn() {
+    const btn = document.getElementById('go-to-bottom-btn');
+    // 현재 스크롤 위치와 전체 높이
+    const scrollY = window.scrollY || window.pageYOffset;
+    const windowH = window.innerHeight;
+    const docH = document.documentElement.scrollHeight;
+    // 바닥에서 50px 이내면 숨김
+    if (scrollY + windowH >= docH - 50) {
+        btn.classList.add('hide');
+    } else {
+        btn.classList.remove('hide');
+    }
+}
+window.addEventListener('scroll', toggleGoToBottomBtn);
+window.addEventListener('resize', toggleGoToBottomBtn);
+document.addEventListener('DOMContentLoaded', toggleGoToBottomBtn);
 </script>
