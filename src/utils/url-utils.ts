@@ -42,37 +42,3 @@ export function getDir(path: string): string {
 export function url(path: string) {
 	return joinUrl("", import.meta.env.BASE_URL, path);
 }
-
-/* For Novels Below */
-export function getNovelPostUrlBySlug(slug: string): string {
-  return url(`/novel/${slug}/`)
-}
-
-export function getNovelCategoryUrl(category: string): string {
-  if (category === i18n(i18nKey.uncategorized))
-    return url('/novel/archive/category/uncategorized/')
-  return url(`/novel/archive/category/${category}/`)
-}
-
-export function getNovelArchiveCategoryUrl(category: string): string {
-  if (category === i18n(i18nKey.uncategorized))
-    return url('/novel/archive/category/uncategorized/')
-  return url(`/novel/archive/category/${category}/`)
-}
-
-/* For Spinoff Below */
-export function getSpinoffPostUrlBySlug(slug: string): string {
-  return url(`/spinoff/${slug}/`)
-}
-
-export function getSpinoffCategoryUrl(category: string): string {
-  if (category === i18n(i18nKey.uncategorized))
-    return url('/spinoff/archive/category/uncategorized/')
-  return url(`/spinoff/archive/category/${category}/`)
-}
-
-export function getSpinoffArchiveCategoryUrl(category: string): string {
-  if (category === i18n(i18nKey.uncategorized))
-    return url('/spinoff/archive/category/uncategorized/')
-  return url(`/spinoff/archive/category/${category}/`)
-}
