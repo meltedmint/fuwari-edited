@@ -110,27 +110,6 @@
     .btn-regular-dark.success {
         @apply bg-[oklch(0.75_0.14_var(--hue))] dark:bg-[oklch(0.75_0.14_var(--hue))]
     }
-
-    .copy-btn-icon {
-        @apply absolute top-1/2 left-1/2 transition -translate-x-1/2 -translate-y-1/2
-    }
-    .copy-btn .copy-icon {
-        @apply opacity-100 fill-white dark:fill-white/75
-    }
-    .copy-btn.success .copy-icon {
-        @apply opacity-0 fill-[var(--deep-text)]
-    }
-    .copy-btn .success-icon {
-        @apply opacity-0
-    }
-    .copy-btn.success .success-icon {
-        @apply opacity-100
-    }
-    
-    .btn-card-bottom {
-        @apply transition flex items-center bg-[var(--card-bg)] hover:bg-[var(--btn-card-bg-hover)]
-        active:bg-[var(--btn-card-bg-active)]
-    }
 }
 
 .custom-md img, #post-cover img {
@@ -159,26 +138,4 @@
 
 .collapsed {
     height: var(--collapsedHeight);
-}
-
-.iframe-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
-}
-
-.iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-#box p {
-    margin-left: 28px;
-    margin-right:28px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    font-size: 1rem;
 }
