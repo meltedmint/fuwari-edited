@@ -32,8 +32,6 @@ It is very similar from the original.
 ## Comments Powered By Giscus!!!
 
 The Comments File is located at:  
-`/src/layouts/CommentSpinoffGridLayout.astro`,
-`/src/layouts/CommentNovelGridLayout.astro`,  
 `/src/layouts/CommentMainGridLayout.astro`.  
 You should add your own code there.  
 For more information, visit [giscus](https://giscus.app/).  
