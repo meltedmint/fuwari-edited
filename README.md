@@ -2,7 +2,7 @@
 
 A static blog template built with [Astro](https://astro.build).
 
-[**🖥️ Live Demo (Node)**](https://meltedmint.com)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+[**🖥️ Live Demo (Node)**](https://blog.meltedmint.com)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
 
 This forked repository origins `Fuwari`.  
 I'll update the features when I notice the new commit is applied to the original.  
