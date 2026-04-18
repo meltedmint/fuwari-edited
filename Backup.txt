@@ -1,0 +1,2 @@
+package.json의 Astro build 명령어입니다.
+"astro build && pagefind --site dist --glob \"**/posts/**/*.html\""

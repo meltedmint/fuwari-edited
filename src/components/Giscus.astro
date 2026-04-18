@@ -1,0 +1,57 @@
+---
+import { siteConfig } from '@/config'
+---
+
+<div class="giscus-wrapper mt-8 w-full max-w-[var(--page-width)] mx-auto px-4 md:px-0">
+  <script src="https://giscus.app/client.js"
+        data-repo="meltedmint/fuwari-edited"
+        data-repo-id="R_kgDONLIzWw"
+        data-category="Comments"
+        data-category-id="DIC_kwDONLIzW84CkBlC"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+  </script>
+</div>
+
+<script is:inline>
+// Function to update Giscus theme dynamically
+function updateGiscusTheme() {
+    const isDark = document.documentElement.classList.contains('dark')
+    const theme = isDark ? 'transparent_dark' : 'light'
+    const iframe = document.querySelector('iframe.giscus-frame')
+    if (!iframe) return
+
+    iframe.contentWindow?.postMessage(
+        { giscus: { setConfig: { theme } } },
+        'https://giscus.app'
+    )
+}
+
+// Observe mutations on the html class to detect theme changes
+const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'class') {
+            updateGiscusTheme()
+        }
+    })
+})
+
+observer.observe(document.documentElement, { attributes: true })
+
+// Also update it when giscus loads initially
+window.addEventListener('message', (event) => {
+    if (event.origin !== 'https://giscus.app') return;
+    if (!(typeof event.data === 'object' && event.data.giscus)) return;
+    
+    // Giscus is ready
+    updateGiscusTheme();
+});
+</script>

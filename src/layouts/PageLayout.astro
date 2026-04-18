@@ -1,0 +1,22 @@
+---
+import Markdown from '@components/misc/Markdown.astro'
+import MainGridLayout from './MainGridLayout.astro'
+
+interface Props {
+  title: string
+  description?: string
+}
+
+const { title, description } = Astro.props
+---
+<MainGridLayout title={title} description={description}>
+    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
+        <div class="card-base z-10 px-9 py-6 relative w-full ">
+            <div data-pagefind-body>
+                <Markdown class="mt-2">
+                    <slot />
+                </Markdown>
+            </div>
+        </div>
+    </div>
+</MainGridLayout>
